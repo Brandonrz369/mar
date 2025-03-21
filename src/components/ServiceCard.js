@@ -1,25 +1,46 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
-const ServiceCard = ({ title, description, imageUrl }) => {
+const ServiceCard = ({ title, description, icon, image, link = '/services' }) => {
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden">
-      <div className="h-48 relative">
-        {imageUrl ? (
+    <div className="card group h-full flex flex-col">
+      {image ? (
+        <div className="relative h-56 overflow-hidden">
           <Image 
-            src={imageUrl} 
+            src={image} 
             alt={title} 
             fill 
-            className="object-cover"
+            className="object-cover transition-transform duration-500 group-hover:scale-110"
           />
-        ) : (
-          <div className="h-full bg-gray-200 flex items-center justify-center">
-            <span className="text-gray-400">Image coming soon</span>
-          </div>
-        )}
-      </div>
-      <div className="p-6">
-        <h3 className="text-xl font-semibold mb-3">{title}</h3>
-        <p className="text-gray-700">{description}</p>
+        </div>
+      ) : icon ? (
+        <div className="h-56 bg-gray-100 flex items-center justify-center">
+          <span className="text-6xl">{icon}</span>
+        </div>
+      ) : null}
+      
+      <div className="p-6 flex flex-col flex-grow">
+        <h3 className="text-xl font-bold mb-3 text-primary">{title}</h3>
+        <p className="text-gray-600 mb-4 flex-grow">{description}</p>
+        <Link 
+          href={link} 
+          className="text-primary font-medium hover:text-blue-800 transition-colors inline-flex items-center"
+        >
+          Learn More
+          <svg
+            className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M14 5l7 7m0 0l-7 7m7-7H3"
+            />
+          </svg>
+        </Link>
       </div>
     </div>
   );

@@ -81,11 +81,10 @@ export default function About() {
               </p>
             </div>
             <div className="relative h-[500px] rounded-lg overflow-hidden shadow-xl">
-              <Image
+              <img
                 src="/images/marinashipyard-scaled.jpg"
                 alt="Marina Shipyard History"
-                fill
-                className="object-cover"
+                className="object-cover w-full h-full absolute inset-0"
               />
             </div>
           </div>

@@ -1,4 +1,4 @@
-import Image from 'next/image';
+// Using standard img tags instead of Next.js Image component
 
 const TestimonialCard = ({ text, name, title, avatar }) => {
   return (
@@ -12,7 +12,7 @@ const TestimonialCard = ({ text, name, title, avatar }) => {
       <div className="flex items-center">
         {avatar ? (
           <div className="h-12 w-12 rounded-full overflow-hidden mr-4 flex-shrink-0">
-            <Image src={avatar} alt={name} width={48} height={48} className="object-cover" />
+            <img src={avatar} alt={name} width="48" height="48" className="object-cover w-full h-full" />
           </div>
         ) : (
           <div className="h-12 w-12 rounded-full bg-primary text-white flex items-center justify-center mr-4 flex-shrink-0">

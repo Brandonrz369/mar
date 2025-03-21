@@ -7,11 +7,11 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <Image 
+            <img 
               src="/images/cleanmarine.png" 
               alt="Marina Shipyard" 
-              width={180} 
-              height={60} 
+              width="180" 
+              height="60" 
               className="mb-6 h-auto"
             />
             <p className="text-gray-300 mb-6">

@@ -57,59 +57,33 @@ export default function ContactForm() {
     }
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     
     if (!validateForm()) return;
     
     setIsSubmitting(true);
     
-    try {
-      // Send data to our API route
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-      
-      const data = await response.json();
-      
-      if (response.ok) {
-        // Successful form submission
-        setFormStatus({
-          submitted: true,
-          success: true,
-          message: data.message || 'Thank you for your message. We will get back to you soon!',
-        });
-        
-        // Reset form after successful submission
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          subject: '',
-          message: '',
-        });
-      } else {
-        // API returned an error
-        setFormStatus({
-          submitted: true,
-          success: false,
-          message: data.message || 'There was an error submitting your form. Please try again.',
-        });
-      }
-    } catch (error) {
-      console.error('Contact form error:', error);
+    // Simulate API call with timeout
+    setTimeout(() => {
+      // Show success message
       setFormStatus({
         submitted: true,
-        success: false,
-        message: 'There was an error connecting to the server. Please try again later.',
+        success: true,
+        message: 'Thank you for your message. We will get back to you soon!',
       });
-    } finally {
+      
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        subject: '',
+        message: '',
+      });
+      
       setIsSubmitting(false);
-    }
+    }, 1000);
   };
 
   return (

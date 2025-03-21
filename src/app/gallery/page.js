@@ -1,9 +1,6 @@
 import ImageGallery from '@/components/ImageGallery';
 
-export const metadata = {
-  title: 'Gallery - Marina Shipyard',
-  description: 'Browse our gallery of boat repair and maintenance projects at Marina Shipyard.',
-};
+// Note: metadata is now handled through the root layout
 
 export default function GalleryPage() {
   // Gallery images data

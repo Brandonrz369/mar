@@ -5,11 +5,8 @@ const nextConfig = {
     domains: ['marinashipyard.com'],
     unoptimized: true,
   },
-  // Add output configuration for static exports
-  output: 'export',
-  // Disable image optimization for static export
-  // This helps with deployment issues
-  distDir: 'build',
+  // Modified for Vercel deployment
+  swcMinify: true,
 };
 
 module.exports = nextConfig;

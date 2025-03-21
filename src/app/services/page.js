@@ -1,4 +1,4 @@
-import Image from 'next/image';
+// Using standard img tags instead of Next.js Image component
 import Link from 'next/link';
 import HeroSection from '@/components/HeroSection';
 import CallToAction from '@/components/CallToAction';
@@ -183,11 +183,11 @@ export default function Services() {
                     <div className="h-12 w-12 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold">1</div>
                   </div>
                   <div className="md:ml-8 p-6 bg-white rounded-lg shadow-md">
-                    <Image
+                    <img
                       src="/images/bg4.jpg"
                       alt="Initial Consultation"
-                      width={500}
-                      height={300}
+                      width="500"
+                      height="300"
                       className="rounded-lg w-full h-auto"
                     />
                   </div>
@@ -206,11 +206,11 @@ export default function Services() {
                     <div className="h-12 w-12 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold">2</div>
                   </div>
                   <div className="md:ml-8 p-6 bg-white rounded-lg shadow-md">
-                    <Image
+                    <img
                       src="/images/bg2.jpg"
                       alt="Detailed Estimate"
-                      width={500}
-                      height={300}
+                      width="500"
+                      height="300"
                       className="rounded-lg w-full h-auto"
                     />
                   </div>
@@ -229,11 +229,11 @@ export default function Services() {
                     <div className="h-12 w-12 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold">3</div>
                   </div>
                   <div className="md:ml-8 p-6 bg-white rounded-lg shadow-md">
-                    <Image
+                    <img
                       src="/images/marinashipyard-scaled.jpg"
                       alt="Quality Service"
-                      width={500}
-                      height={300}
+                      width="500"
+                      height="300"
                       className="rounded-lg w-full h-auto"
                     />
                   </div>
@@ -252,11 +252,11 @@ export default function Services() {
                     <div className="h-12 w-12 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold">4</div>
                   </div>
                   <div className="md:ml-8 p-6 bg-white rounded-lg shadow-md">
-                    <Image
+                    <img
                       src="/images/bg4.jpg"
                       alt="Final Inspection"
-                      width={500}
-                      height={300}
+                      width="500"
+                      height="300"
                       className="rounded-lg w-full h-auto"
                     />
                   </div>

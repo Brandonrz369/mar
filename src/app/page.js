@@ -1,4 +1,4 @@
-import Image from 'next/image';
+// Using standard img tags instead of Next.js Image
 import Link from 'next/link';
 import HeroSection from '@/components/HeroSection';
 import ServiceCard from '@/components/ServiceCard';
@@ -89,11 +89,10 @@ export default function Home() {
               </Link>
             </div>
             <div className="relative h-96 rounded-lg overflow-hidden shadow-xl">
-              <Image
+              <img
                 src="/images/marinashipyard-scaled.jpg"
                 alt="Marina Shipyard"
-                fill
-                className="object-cover"
+                className="object-cover w-full h-full absolute inset-0"
               />
             </div>
           </div>

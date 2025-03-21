@@ -34,5 +34,11 @@ next-env.d.ts
 
 # httrack
 hts-*
+hts-cache/
 cookie.txt
+cookies.txt
 backups/
+backblue.gif
+fade.gif
+/marinashipyard.com/
+/index.html

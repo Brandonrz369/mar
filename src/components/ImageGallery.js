@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from 'react';
-import Image from 'next/image';
+// Using standard img tags instead of Next.js Image
 
 export default function ImageGallery({ images }) {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -25,11 +25,10 @@ export default function ImageGallery({ images }) {
             className="group relative h-64 overflow-hidden rounded-lg shadow-md cursor-pointer transition-transform hover:scale-105"
             onClick={() => openLightbox(image)}
           >
-            <Image
+            <img
               src={image.src}
               alt={image.alt || 'Gallery image'}
-              fill
-              className="object-cover"
+              className="object-cover w-full h-full absolute inset-0"
             />
             {image.caption && (
               <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-2 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -53,11 +52,10 @@ export default function ImageGallery({ images }) {
               &times;
             </button>
             <div className="relative w-full h-[80vh]">
-              <Image
+              <img
                 src={selectedImage.src}
                 alt={selectedImage.alt || 'Gallery image'}
-                fill
-                className="object-contain"
+                className="object-contain w-full h-full absolute inset-0"
               />
             </div>
             {selectedImage.caption && (

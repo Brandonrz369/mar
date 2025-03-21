@@ -1,4 +1,4 @@
-import Image from 'next/image';
+// Using standard img tags instead of Next.js Image
 import Link from 'next/link';
 
 const ServiceCard = ({ title, description, icon, image, link = '/services' }) => {
@@ -6,11 +6,10 @@ const ServiceCard = ({ title, description, icon, image, link = '/services' }) =>
     <div className="card group h-full flex flex-col">
       {image ? (
         <div className="relative h-56 overflow-hidden">
-          <Image 
+          <img 
             src={image} 
             alt={title} 
-            fill 
-            className="object-cover transition-transform duration-500 group-hover:scale-110"
+            className="object-cover transition-transform duration-500 group-hover:scale-110 w-full h-full absolute inset-0"
           />
         </div>
       ) : icon ? (

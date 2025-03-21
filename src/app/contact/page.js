@@ -62,11 +62,10 @@ export default function ContactPage() {
               </div>
               
               <div className="relative h-48 rounded-lg overflow-hidden">
-                <Image
+                <img
                   src="/images/marinashipyard-scaled.jpg"
                   alt="Marina Shipyard Location"
-                  fill
-                  className="object-cover"
+                  className="object-cover w-full h-full absolute inset-0"
                 />
               </div>
             </div>

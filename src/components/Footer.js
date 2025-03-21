@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
+// Remove Next.js Image component in favor of standard img tags
 
 const Footer = () => {
   return (

@@ -1,4 +1,4 @@
-import Image from 'next/image';
+// Using standard img tags instead of Next.js Image
 import HeroSection from '@/components/HeroSection';
 import CallToAction from '@/components/CallToAction';
 

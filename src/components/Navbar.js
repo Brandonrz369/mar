@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+// Using standard img tags instead of Next.js Image component
 import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
@@ -41,11 +41,11 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <Link href="/" className="flex items-center">
-            <Image 
+            <img 
               src="/images/cleanmarine.png" 
               alt="Marina Shipyard" 
-              width={160} 
-              height={50} 
+              width="160" 
+              height="50" 
               className="h-auto"
             />
           </Link>

@@ -1,10 +1,10 @@
+'use client';
+
 import Image from 'next/image';
 import ContactForm from '@/components/ContactForm';
 
-export const metadata = {
-  title: 'Contact Us - Marina Shipyard',
-  description: 'Contact Marina Shipyard for boat repair, maintenance services, or to request a quote.',
-};
+// Note: metadata must be in a separate file when using client components
+// This will be handled by the root layout
 
 export default function ContactPage() {
   return (

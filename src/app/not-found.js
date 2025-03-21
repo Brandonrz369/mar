@@ -1,9 +1,9 @@
+'use client';
+
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'Page Not Found - Marina Shipyard',
-  description: 'The page you are looking for could not be found.',
-};
+// Note: metadata must be in a separate file when using client components
+// This will be handled by the root layout
 
 export default function NotFound() {
   return (

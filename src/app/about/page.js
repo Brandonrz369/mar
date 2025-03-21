@@ -1,5 +1,6 @@
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import Image from 'next/image';
 
 export default function About() {
   return (
@@ -30,8 +31,13 @@ export default function About() {
                 Today, Marina Shipyard continues to be family-owned and operated, with the second generation of the Martinez family leading the way. We remain committed to our founding principles of integrity, quality, and customer satisfaction.
               </p>
             </div>
-            <div className="bg-gray-200 h-96 flex items-center justify-center">
-              <span className="text-gray-500">Image coming soon</span>
+            <div className="h-96 relative rounded-lg overflow-hidden shadow-xl">
+              <Image 
+                src="/images/2024/03/marinashipyard-scaled.jpg"
+                alt="Marina Shipyard"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -42,17 +48,38 @@ export default function About() {
           <h2 className="text-3xl font-bold mb-8 text-center">Our Team</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded shadow-md text-center">
-              <div className="w-32 h-32 rounded-full bg-gray-300 mx-auto mb-4"></div>
+              <div className="w-32 h-32 rounded-full bg-gray-300 mx-auto mb-4 relative overflow-hidden">
+                <Image 
+                  src="/images/2024/03/cleanmarine.png"
+                  alt="Team Member"
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <h3 className="text-xl font-semibold">Michael Martinez</h3>
               <p className="text-primary font-medium">Owner & General Manager</p>
             </div>
             <div className="bg-white p-6 rounded shadow-md text-center">
-              <div className="w-32 h-32 rounded-full bg-gray-300 mx-auto mb-4"></div>
+              <div className="w-32 h-32 rounded-full bg-gray-300 mx-auto mb-4 relative overflow-hidden">
+                <Image 
+                  src="/images/2024/03/cleanmarine.png"
+                  alt="Team Member"
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <h3 className="text-xl font-semibold">Jessica Martinez</h3>
               <p className="text-primary font-medium">Operations Director</p>
             </div>
             <div className="bg-white p-6 rounded shadow-md text-center">
-              <div className="w-32 h-32 rounded-full bg-gray-300 mx-auto mb-4"></div>
+              <div className="w-32 h-32 rounded-full bg-gray-300 mx-auto mb-4 relative overflow-hidden">
+                <Image 
+                  src="/images/2024/03/cleanmarine.png"
+                  alt="Team Member"
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <h3 className="text-xl font-semibold">Robert Johnson</h3>
               <p className="text-primary font-medium">Head Technician</p>
             </div>
@@ -60,8 +87,17 @@ export default function About() {
         </div>
       </section>
       
-      <section className="py-16">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-16 relative">
+        <div className="absolute inset-0 z-0">
+          <Image 
+            src="/images/2020/12/bg2.jpg"
+            alt="Marina Background"
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-70"></div>
+        </div>
+        <div className="container mx-auto px-4 text-center z-10 relative text-white">
           <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
           <p className="text-xl max-w-3xl mx-auto mb-8">
             To provide exceptional marine services that exceed our customers' expectations while maintaining the highest standards of quality, integrity, and professionalism.

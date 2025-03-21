@@ -2,6 +2,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Hero from '../components/Hero';
 import ServiceCard from '../components/ServiceCard';
+import Image from 'next/image';
 
 export default function Home() {
   // Services data
@@ -9,17 +10,17 @@ export default function Home() {
     {
       title: 'Boat Repairs',
       description: 'Professional boat repair services by our experienced technicians. We handle everything from minor fixes to major overhauls.',
-      imageUrl: null, // Will be updated when we have actual images
+      imageUrl: '/images/2024/03/marinashipyard-scaled.jpg',
     },
     {
       title: 'Boat Storage',
       description: 'Secure boat slips and storage options for vessels of all sizes. Both indoor and outdoor options available.',
-      imageUrl: null,
+      imageUrl: '/images/2024/02/bg4.jpg',
     },
     {
       title: 'Maintenance',
       description: 'Regular maintenance services to keep your boat in top condition. We offer scheduled maintenance packages tailored to your needs.',
-      imageUrl: null,
+      imageUrl: '/images/2020/12/bg2.jpg',
     },
   ];
 
@@ -27,7 +28,32 @@ export default function Home() {
     <main className="min-h-screen flex flex-col">
       <Navbar />
       
-      <Hero />
+      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image 
+            src="/images/2024/02/bg4.jpg"
+            alt="Marina Shipyard"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        </div>
+        <div className="container mx-auto px-4 z-10 text-center text-white">
+          <Image 
+            src="/images/2024/03/cleanmarine.png"
+            alt="Marina Shipyard Logo"
+            width={250}
+            height={100}
+            className="mx-auto mb-6"
+          />
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Marina Shipyard</h1>
+          <p className="text-xl max-w-3xl mx-auto mb-8">
+            Your full-service marina and shipyard providing quality marine repair services and boat storage solutions.
+          </p>
+          <button className="btn-primary text-lg px-8 py-3">View Our Services</button>
+        </div>
+      </section>
       
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -69,13 +95,22 @@ export default function Home() {
         </div>
       </section>
       
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-16 relative">
+        <div className="absolute inset-0 z-0">
+          <Image 
+            src="/images/2020/12/bg2.jpg"
+            alt="Marina Backdrop"
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+        </div>
+        <div className="container mx-auto px-4 text-center z-10 relative text-white">
           <h2 className="text-3xl font-bold mb-6">Contact Us Today</h2>
           <p className="text-xl max-w-3xl mx-auto mb-8">
             Get in touch with us to learn more about our services or to schedule an appointment.
           </p>
-          <button className="btn-primary text-lg">Contact Us</button>
+          <button className="bg-white text-primary font-bold py-2 px-8 rounded text-lg hover:bg-gray-100 transition-colors">Contact Us</button>
         </div>
       </section>
 

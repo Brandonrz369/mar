@@ -3,17 +3,17 @@ import Footer from '../../components/Footer';
 import Link from 'next/link';
 
 export default function Gallery() {
-  // Gallery placeholders with emojis
+  // Gallery items with marine-specific titles
   const galleryItems = [
-    { emoji: '🚤', label: 'Speedboat' },
-    { emoji: '⚓', label: 'Anchor' },
-    { emoji: '🛥️', label: 'Motorboat' },
-    { emoji: '🛳️', label: 'Cruise Ship' },
-    { emoji: '⛵', label: 'Sailboat' },
-    { emoji: '🚢', label: 'Ship' },
-    { emoji: '🌊', label: 'Wave' },
-    { emoji: '🐋', label: 'Whale' },
-    { emoji: '🐬', label: 'Dolphin' },
+    { emoji: '🚤', label: 'Powerboat Repair' },
+    { emoji: '⚓', label: 'Yacht Maintenance' },
+    { emoji: '🛥️', label: 'Hull Painting' },
+    { emoji: '🏗️', label: 'Haul Out Services' },
+    { emoji: '⛵', label: 'Sailboat Rigging' },
+    { emoji: '🔧', label: 'Engine Repairs' },
+    { emoji: '🛠️', label: 'Custom Work' },
+    { emoji: '🌊', label: 'Waterfront Facilities' },
+    { emoji: '🚢', label: 'Commercial Services' },
   ];
 
   return (
@@ -22,9 +22,9 @@ export default function Gallery() {
       
       <section className="py-16 bg-secondary">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold mb-6">Photo Gallery</h1>
+          <h1 className="text-4xl font-bold mb-6">Our Work Gallery</h1>
           <p className="text-xl max-w-3xl mx-auto">
-            Take a look at our facilities and some of our recent projects.
+            Take a look at examples of our quality marine services and some of our recent projects.
           </p>
         </div>
       </section>
@@ -38,9 +38,33 @@ export default function Gallery() {
                 className="h-64 bg-gray-100 flex flex-col items-center justify-center rounded-lg shadow-md hover:shadow-lg transition-shadow"
               >
                 <span className="text-6xl mb-4">{item.emoji}</span>
-                <span className="text-xl font-medium">{item.label}</span>
+                <span className="text-xl font-medium text-primary">{item.label}</span>
+                <p className="text-gray-500 mt-2">Click to view gallery</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+      
+      <section className="py-16 bg-gray-100">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-6">Our Facilities</h2>
+            <p className="text-lg mb-6">
+              Marina Shipyard is equipped with modern facilities to handle all your marine service needs. 
+              We have extensive yard space, equipment, and experienced staff to ensure your boat receives 
+              the best care possible.
+            </p>
+            <div className="h-80 bg-white rounded-lg shadow-md overflow-hidden mt-8">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3316.963259763726!2d-118.13248388479652!3d33.75787168068711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dd31c1a1e0bc33%3A0x770ce3306d3c9604!2s6400%20Marina%20Dr%2C%20Long%20Beach%2C%20CA%2090803!5e0!3m2!1sen!2sus!4v1621517462123!5m2!1sen!2sus" 
+                className="w-full h-full"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                title="Marina Shipyard Location"
+              ></iframe>
+            </div>
           </div>
         </div>
       </section>

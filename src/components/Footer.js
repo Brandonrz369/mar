@@ -22,6 +22,7 @@ const Footer = () => {
         </div>
         <div className="mt-8 text-center border-t border-blue-700 pt-6">
           <p>&copy; {new Date().getFullYear()} Marina Shipyard. All Rights Reserved.</p>
+          <p className="mt-2 text-sm">Website designed by Brandon | <a href="https://github.com/Brandonrz369/mar" className="underline hover:text-gray-300">View Source</a></p>
         </div>
       </div>
     </footer>

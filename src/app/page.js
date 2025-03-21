@@ -29,7 +29,7 @@ export default function Home() {
       
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden bg-primary">
         <div className="container mx-auto px-4 z-10 text-center text-white">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Marina Shipyard</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Marina Shipyard & Marine Services</h1>
           <p className="text-xl max-w-3xl mx-auto mb-8">
             Your full-service marina and shipyard providing quality marine repair services and boat storage solutions.
           </p>

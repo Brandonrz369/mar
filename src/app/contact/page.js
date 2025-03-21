@@ -59,7 +59,9 @@ export default function Contact() {
                     placeholder="Your message"
                   ></textarea>
                 </div>
-                <button type="submit" className="btn-primary py-3 px-8">Send Message</button>
+                <button type="submit" className="bg-primary text-white font-medium py-2 px-6 rounded hover:bg-opacity-90 transition-colors">
+                  Send Message
+                </button>
               </form>
             </div>
             
@@ -85,9 +87,9 @@ export default function Contact() {
               </div>
               
               <div className="mt-8">
-                <h3 className="text-lg font-semibold mb-4">Map</h3>
-                <div className="bg-gray-200 h-80 flex items-center justify-center rounded">
-                  <span className="text-gray-500">Map will be added here</span>
+                <h3 className="text-lg font-semibold mb-4">Location</h3>
+                <div className="bg-gray-200 h-80 flex items-center justify-center rounded-lg">
+                  <span className="text-4xl">📍</span>
                 </div>
               </div>
             </div>

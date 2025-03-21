@@ -1,18 +1,11 @@
 import Link from 'next/link';
-import Image from 'next/image';
 
 const Navbar = () => {
   return (
     <header className="bg-primary text-white p-4 md:p-6 sticky top-0 z-50 shadow-md">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
-        <Link href="/" className="flex items-center mb-4 md:mb-0">
-          <Image 
-            src="/images/2024/03/cleanmarine.png"
-            alt="Marina Shipyard"
-            width={180}
-            height={60}
-            className="mr-2"
-          />
+        <Link href="/" className="text-2xl font-bold mb-4 md:mb-0">
+          Marina Shipyard
         </Link>
         <nav>
           <ul className="flex flex-wrap justify-center space-x-6">

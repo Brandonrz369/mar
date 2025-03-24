@@ -5,10 +5,6 @@ const nextConfig = {
     domains: ['marinashipyard.com'],
     unoptimized: true,
   },
-  // Use Pages Router explicitly
-  experimental: {
-    appDir: false,
-  },
   swcMinify: true,
 };
 

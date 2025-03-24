@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface HeroSectionProps {
   title: string;
@@ -8,6 +9,7 @@ interface HeroSectionProps {
   backgroundImage?: string;
   height?: string;
   phoneNumber?: string | null;
+  ctaText?: string;
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({
@@ -15,17 +17,31 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   subtitle,
   buttonText = 'Learn More',
   buttonLink = '/services',
-  backgroundImage = 'bg-hero-pattern',
+  backgroundImage = '/images/marinashipyard-scaled.jpg',
   height = 'h-screen',
-  phoneNumber = null
+  phoneNumber = null,
+  ctaText = 'Get your boat in ship-shape!'
 }) => {
   return (
-    <section className={`relative ${height} flex items-center justify-center ${backgroundImage} bg-cover bg-center`}>
+    <section 
+      className={`relative ${height} flex items-center justify-center bg-cover bg-center`} 
+      style={{ backgroundImage: `url(${backgroundImage})` }}
+    >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black opacity-50"></div>
+      <div className="absolute inset-0 bg-black opacity-60"></div>
       
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10 text-center text-white">
+        <div className="mb-4">
+          <Image 
+            src="/images/cleanmarine.png" 
+            alt="Marina Shipyard Logo" 
+            width={220} 
+            height={80} 
+            className="mx-auto"
+          />
+        </div>
+        
         {phoneNumber && (
           <div className="absolute top-4 right-4 md:top-8 md:right-8">
             <a 
@@ -45,14 +61,25 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           </div>
         )}
         
-        <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">{title}</h1>
-        <p className="text-xl md:text-2xl max-w-3xl mx-auto mb-10 opacity-90">{subtitle}</p>
-        <Link 
-          href={buttonLink}
-          className="btn bg-primary hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-md transition-colors shadow-md hover:shadow-lg text-lg"
-        >
-          {buttonText}
-        </Link>
+        <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">{title}</h1>
+        <p className="text-xl md:text-2xl max-w-3xl mx-auto mb-4 opacity-90">{subtitle}</p>
+        <p className="text-2xl md:text-3xl font-bold text-accent mb-10">{ctaText}</p>
+        
+        <div className="flex flex-col md:flex-row gap-4 justify-center">
+          <Link 
+            href={buttonLink}
+            className="btn bg-primary hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-md transition-colors shadow-md hover:shadow-lg text-lg"
+          >
+            {buttonText}
+          </Link>
+          
+          <Link 
+            href="/contact"
+            className="btn bg-accent hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-md transition-colors shadow-md hover:shadow-lg text-lg"
+          >
+            Request a Quote
+          </Link>
+        </div>
       </div>
     </section>
   );

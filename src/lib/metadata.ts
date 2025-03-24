@@ -1,74 +1,70 @@
-interface SiteMetadata {
+interface Social {
+  facebook?: string;
+  instagram?: string;
+  twitter?: string;
+  linkedin?: string;
+  youtube?: string;
+}
+
+interface Contact {
+  phone: string;
+  email: string;
+  address: {
+    street: string;
+    city: string;
+    state: string;
+    zip: string;
+  };
+  googleMapsUrl?: string;
+}
+
+interface Hours {
+  weekday: string;
+  weekend: string;
+  holiday?: string;
+}
+
+export interface SiteMetadata {
   title: string;
   description: string;
   siteUrl: string;
-  siteName: string;
-  locale: string;
-  type: string;
-  twitterHandle: string;
-  keywords: string[];
-  social: {
-    facebook: string;
-    twitter: string;
-    instagram: string;
-    yelp: string;
+  logo: {
+    default: string;
+    alt: string;
   };
-  contact: {
-    phone: string;
-    email: string;
-    address: string;
-  };
-  hours: {
-    monday: string;
-    tuesday: string;
-    wednesday: string;
-    thursday: string;
-    friday: string;
-    saturday: string;
-    sunday: string;
-  };
+  social: Social;
+  contact: Contact;
+  hours: Hours;
+  foundingYear: number;
 }
 
-const siteMetadata: SiteMetadata = {
-  title: 'Marina Shipyard - Marine Services & Boat Repair',
-  description: 'Full-service marina and shipyard providing quality marine repair services, boat slips, and more since 1964.',
-  siteUrl: 'https://marinashipyard.com',
-  siteName: 'Marina Shipyard',
-  locale: 'en-US',
-  type: 'website',
-  twitterHandle: '@marinashipyard',
-  keywords: [
-    'boat repair',
-    'marina',
-    'shipyard',
-    'boat maintenance',
-    'marine services',
-    'haul and launch',
-    'bottom painting',
-    'Long Beach',
-    'California',
-    'boat yard',
-  ],
+const metadata: SiteMetadata = {
+  title: 'Marina Shipyard - Professional Marine Services Since 1964',
+  description: 'Marina Shipyard offers quality boat repair, maintenance, and marine services. Family owned and operated for three generations since 1964. Serving Long Beach, CA.',
+  siteUrl: 'https://www.marinashipyard.com',
+  logo: {
+    default: '/images/cleanmarine.png',
+    alt: 'Marina Shipyard Logo',
+  },
   social: {
-    facebook: 'https://facebook.com/marinashipyard',
-    twitter: 'https://twitter.com/marinashipyard',
-    instagram: 'https://instagram.com/marinashipyard',
-    yelp: 'https://yelp.com/biz/marina-shipyard-long-beach',
+    facebook: 'https://www.facebook.com/marina.shipyard',
   },
   contact: {
     phone: '(562) 594-0995',
     email: 'info@marinashipyard.com',
-    address: '6400 E Marina Dr, Long Beach, CA 90803',
+    address: {
+      street: '6400 Marina Drive',
+      city: 'Long Beach',
+      state: 'CA',
+      zip: '90803',
+    },
+    googleMapsUrl: 'https://maps.google.com/?q=Marina+Shipyard+6400+Marina+Drive+Long+Beach+CA+90803',
   },
   hours: {
-    monday: '8:00 AM - 5:00 PM',
-    tuesday: '8:00 AM - 5:00 PM',
-    wednesday: '8:00 AM - 5:00 PM',
-    thursday: '8:00 AM - 5:00 PM',
-    friday: '8:00 AM - 5:00 PM',
-    saturday: '9:00 AM - 3:00 PM',
-    sunday: 'Closed',
+    weekday: 'Monday-Saturday: 8:00 AM - 5:00 PM',
+    weekend: 'Sunday: Closed',
   },
+  foundingYear: 1964,
 };
 
-export default siteMetadata;
+export default metadata;
